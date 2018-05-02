@@ -6,15 +6,15 @@ using namespace std;
 class DayOfYear{
 
 	int rawDay;
-	string month; 	//"January", etc
-	int day; 		//0-31
+	string month;
+	int day;	
 
 	public:
-		DayOfYear(int _rawDay){ 				//original constructor
+		DayOfYear(int _rawDay){ 		//original constructor
 			rawDay = _rawDay;
 		}
 
-		DayOfYear(string _month, int _day){		//modification constructor
+		DayOfYear(string _month, int _day){	//modification constructor
 			if(_day > 31){
 				cout << "Error: amount of days cannot be more than 31";
 			}else{
@@ -85,6 +85,6 @@ class DayOfYear{
 				day = 31 - dayArray[i]-rawDay;
 				break;
 			}
-			cout << month << " " + day;
+			cout << month << " " << day;
 		}
 };
